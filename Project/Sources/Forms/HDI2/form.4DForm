@@ -1,0 +1,251 @@
+﻿{
+	"destination": "detailScreen",
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Barre #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onTimer",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "842pt",
+		"paperHeight": "595pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Tab Control": {
+					"type": "tab",
+					"top": 20,
+					"left": 20,
+					"width": 680,
+					"height": 450,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "_TabTitles",
+					"dataSourceTypeHint": "arrayText",
+					"action": "gotoPage",
+					"events": [
+						"onClick"
+					],
+					"labels": [
+						"Info",
+						"Example"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Text": {
+					"type": "text",
+					"text": "With 4D v18 R3, you can create class in 4D. \r\rWhat makes a class? A class is composed of functions and a constructor. \r\rIn this example, we create a Person class with:\r     * two functions (getFullName and getAge), and\r     * a constructor to initialize the attributes (firstName, lastName and birthdate).",
+					"top": 70,
+					"left": 40,
+					"width": 640,
+					"height": 380,
+					"fontSize": 14,
+					"sizingX": "grow",
+					"sizingY": "grow"
+				}
+			}
+		},
+		{
+			"objects": {
+				"information1": {
+					"type": "text",
+					"top": 80,
+					"left": 40,
+					"width": 641,
+					"height": 17,
+					"sizingX": "grow",
+					"text": "1. Enter the information and create an instance of the Person class",
+					"fontWeight": "bold"
+				},
+				"information2": {
+					"type": "text",
+					"top": 230,
+					"left": 40,
+					"width": 641,
+					"height": 17,
+					"sizingX": "grow",
+					"text": "2. Retrieve the full name with the getFullName function",
+					"fontWeight": "bold"
+				},
+				"information3": {
+					"type": "text",
+					"top": 340,
+					"left": 40,
+					"width": 641,
+					"height": 17,
+					"sizingX": "grow",
+					"text": "3. Compute the age with the getAge function",
+					"fontWeight": "bold"
+				},
+				"TextFirstname": {
+					"type": "text",
+					"text": "First name:",
+					"top": 110,
+					"left": 40,
+					"width": 100,
+					"height": 16,
+					"textAlign": "right"
+				},
+				"TextLastname": {
+					"type": "text",
+					"text": "Last name:",
+					"top": 140,
+					"left": 40,
+					"width": 100,
+					"height": 16,
+					"textAlign": "right"
+				},
+				"TextBirthdate": {
+					"type": "text",
+					"text": "Birthdate:",
+					"top": 170,
+					"left": 40,
+					"width": 100,
+					"height": 16,
+					"textAlign": "right"
+				},
+				"InputFirstname": {
+					"type": "input",
+					"left": 150,
+					"top": 110,
+					"width": 150,
+					"height": 17,
+					"defaultValue": "",
+					"dataSource": "Form:C1466.firstname"
+				},
+				"InputLastname": {
+					"type": "input",
+					"left": 150,
+					"top": 140,
+					"width": 150,
+					"height": 17,
+					"dataSource": "Form:C1466.lastname"
+				},
+				"InputBirthdate": {
+					"type": "input",
+					"left": 150,
+					"top": 170,
+					"width": 150,
+					"height": 17,
+					"dataSource": "Form:C1466.birthdate",
+					"dataSourceTypeHint": "date",
+					"dateFormat": "systemMedium"
+				},
+				"ButtonCreate": {
+					"type": "button",
+					"text": "Create an instance of Person",
+					"top": 110,
+					"left": 384,
+					"width": 205,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button.4dm"
+				},
+				"ButtonFullname": {
+					"type": "button",
+					"text": "Compute full name",
+					"top": 260,
+					"left": 95,
+					"width": 205,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button1.4dm"
+				},
+				"ButtonAge": {
+					"type": "button",
+					"text": "Compute age",
+					"top": 370,
+					"left": 95,
+					"width": 205,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button2.4dm"
+				},
+				"InputFullname": {
+					"type": "input",
+					"left": 384,
+					"top": 263,
+					"width": 150,
+					"height": 17,
+					"dataSource": "Form:C1466.fullname",
+					"enterable": false
+				},
+				"InputAge": {
+					"type": "input",
+					"left": 384,
+					"top": 373,
+					"width": 150,
+					"height": 17,
+					"dataSource": "Form:C1466.age",
+					"enterable": false
+				},
+				"TextFormuleAge": {
+					"type": "text",
+					"text": "age:=oPerson.getAge()",
+					"top": 400,
+					"left": 95,
+					"width": 159,
+					"height": 16
+				},
+				"TextFormuleFullname": {
+					"type": "text",
+					"text": "fullname:=oPerson.getFullName()",
+					"top": 290,
+					"left": 95,
+					"width": 217,
+					"height": 16
+				},
+				"Check Box": {
+					"type": "checkbox",
+					"text": "Trace",
+					"top": 436,
+					"left": 600,
+					"width": 84,
+					"height": 19,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "nTrace"
+				},
+				"TextFormuleFullname1": {
+					"type": "text",
+					"text": "oPerson:=cs.Person.new(firstname; lastname; birthdate)",
+					"top": 140,
+					"left": 384,
+					"width": 297,
+					"height": 46
+				}
+			},
+			"entryOrder": [
+				"ButtonFullname",
+				"Check Box"
+			]
+		}
+	],
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowMinWidth": 720,
+	"windowMinHeight": 490
+}

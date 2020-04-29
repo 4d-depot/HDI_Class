@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><preferences stamp="3">
+	<com.4d>
+		<general startup_environnement="1"/>
+		<interface>
+			<developper display_toolbar="true"/>
+			<user splash_screen="false"/>
+		</interface>
+	</com.4d>
+</preferences>
